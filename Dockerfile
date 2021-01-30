@@ -1,5 +1,7 @@
 FROM rstudio/plumber
 
+COPY plumber.R /
+
 RUN apt-get update && apt-get install -y \
     sudo \
     gdebi-core \
@@ -20,4 +22,4 @@ RUN apt-get update && apt-get install -y \
 #RUN R -e "install.packages('prophet', repos = 'http://cran.r-project.org')"
 
 
-CMD ["/app/plumber.R"]
+CMD ["/plumber.R"]
