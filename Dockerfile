@@ -12,6 +12,8 @@ RUN apt-get update && apt-get install -y \
  #   libssl-dev \
  #   r-cran-rstan
 
+ COPY test /test
+
 #RUN R -e "install.packages('V8')"
 #RUN R -e "install.packages('prophet', type='source')"
 
